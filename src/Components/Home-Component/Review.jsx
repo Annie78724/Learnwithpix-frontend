@@ -7,7 +7,7 @@ import { Buffer } from "buffer";
 function Review() {
   const [reviewArr,setReviewArr]= useState([]);
   useEffect(()=>{
-      axios.get("http://localhost:5000/getreview").then((res)=>{
+      axios.get("https://learnwithpix.vercel.app/getreview").then((res)=>{
         console.log(res.data.userReview);
         res.data.userReview.forEach((review) => {
           let imgUrl = new Buffer.from(review.avatar.data).toString("base64"); 

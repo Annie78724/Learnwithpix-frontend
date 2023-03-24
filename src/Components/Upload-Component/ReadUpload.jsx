@@ -36,7 +36,7 @@ function ReadUpload() {
         console.log(sentenceSections);
         //  return;
         await axios
-            .post("http://localhost:5000/storyupload", { title, sentenceSections})
+            .post("https://learnwithpix.vercel.app/storyupload", { title, sentenceSections})
             .then((res) => {
                 console.log(res);
                 Swal.fire({

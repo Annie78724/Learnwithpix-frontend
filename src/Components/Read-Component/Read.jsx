@@ -18,7 +18,7 @@ function Read() {
     return <span>Browser doesn't support speech recognition.</span>;
   }
   useEffect(() => {
-    axios.get("http://localhost:5000/storyupload").then((response) => {
+    axios.get("https://learnwithpix.vercel.app/storyupload").then((response) => {
           response.data.story.forEach((storyData) => {
             console.log(storyData.sections);
       setImgArr(prevState => [...prevState, {title: storyData.title, sentences: storyData.sections, id: storyData._id}]);

@@ -10,7 +10,7 @@ function Account() {
     const[email,setEmail] = useState('');
     const[type,setType] = useState("");
     console.log(userid);
-    axios.post("http://localhost:5000/account", {userid}
+    axios.post("https://learnwithpix.vercel.app/account", {userid}
     ).then((res) => {
         console.log(typeof(res.data.Account.isStudent));
         setName(res.data.Account.name);

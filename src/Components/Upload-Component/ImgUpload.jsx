@@ -25,7 +25,7 @@ function ImgUpload() {
     formData.append('type', newImage.type);
     formData.append('image', newImage.image);
 
-    axios.post('http://localhost:5000/imgupload', formData)
+    axios.post("https://learnwithpix.vercel.app/imgupload", formData)
       .then(res => {
         console.log(res);
         Swal.fire({

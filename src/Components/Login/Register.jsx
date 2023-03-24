@@ -60,7 +60,7 @@ function Register() {
         text: 'Password went wrong!',
       })
     } else {
-      axios.post('http://localhost:5000/register', { name, email, password, age, isStudent })
+      axios.post("https://learnwithpix.vercel.app/register", { name, email, password, age, isStudent })
         .then((res) => {
           console.log(res);
           Swal.fire({
@@ -73,11 +73,11 @@ function Register() {
 
         })
         .catch((err) => {
-          console.log(err.response.data);
+          console.log(err);
           Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: err.response.data
+            text: err
           })
         });
 
@@ -97,7 +97,7 @@ function Register() {
     e.preventDefault();
     console.log("logged in");
 
-    axios.post('http://localhost:5000/login', { email, password })
+    axios.post("https://learnwithpix.vercel.app/login", { email, password })
       .then((res) => {
         console.log(res);
         Swal.fire({
